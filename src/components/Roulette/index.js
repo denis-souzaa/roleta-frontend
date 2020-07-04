@@ -37,6 +37,13 @@ export default function Roleta() {
         console.log(description);
     }
 
+<<<<<<< HEAD
+=======
+    function openQuestionModal(title) {
+        
+    }
+
+>>>>>>> 8d668593b86c14f165e7e553f625fe455090b4f0
     return (
         <div className='game-box'>
             <Roulette {...roulette_props}
