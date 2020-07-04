@@ -1,20 +1,37 @@
 import React, { useState } from 'react';
 import Roleta from './components/Roulette';
+import Confetti from 'react-confetti'
+
+import Chances from './components/Chances';
 
 import logo from './images/logo.svg';
 import menuImg from './images/menu.svg';
 import closeImg from './images/close.svg';
-import Confetti from 'react-confetti'
+
 
 function App() {
 
   //const menuOptions = ["Info", "Question"];
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [questionOpen, setQuestionOpen] = useState({
+    description: '',
+    option: ''
+  });
   const [isCompleted, setIsCompleted] = useState(false);
+  const [ chances, setChances ] = useState(3);
 
   function handleMenu() {
-    let open = !menuOpen;
-    setMenuOpen(open)
+    let open = !openModal;
+    setOpenModal(open)
+  }
+
+  function handleQuestion(description, option){
+    setOpenModal(true);
+    setQuestionOpen({description, option});
+  }
+
+  function downChances(){
+    setChances(chances - 1);
   }
 
   function rolleteIsCompleted(completed) {
@@ -24,17 +41,19 @@ function App() {
   return (
     <>
       <main>
-        <div className={`body sidemenu ${menuOpen ? 'open' : ''}`}>
+        <div className={`body sidemenu ${openModal ? 'open' : ''}`}>
           <div className="menu">
             <div className="menu-content">
               <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
                 <img src={closeImg} alt="close" />
               </a>
-              <div className="question">
-                <h3>Pergunta: Você bla bla bla?</h3>
-                {/* <span className="btn btn-question">😂 Pergunta</span>
-                <span className="btn btn-challenge">😈 Desafio</span> */}
-              </div>
+              {
+                chances > 0 ? 
+                <div className="question">
+                  <h3>{questionOpen.option}:</h3>
+                  <p>{questionOpen.description}</p>
+                </div> : <Chances />
+              }
               {/* <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
                 <img src={closeImg} alt="close" />
               </a>
@@ -66,7 +85,11 @@ function App() {
               </div>
             </div>
             <div className="roullete-container">
-              <Roleta isCompleted={rolleteIsCompleted} />
+              <Roleta 
+                isCompleted={rolleteIsCompleted}
+                openQuestion={handleQuestion}
+                downChances = {downChances}
+              />
             </div>
           </div>
           <Confetti

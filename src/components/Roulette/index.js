@@ -29,18 +29,25 @@ export default function Roleta(props) {
         pointer_img
     }
 
-    async function onComplete(option){
-        //const response = await api.get(`/challenges/${option}`);
+    async function onComplete(prize){
+        const response = await api.get(`/challenges/${prize}`);
+        const { description, option } = response.data;
+        
         props.isCompleted(true);
-       // const { description } = response.data;
+        setTimeout(() => {
+            props.openQuestion(description, option);
+        }, 1000)
+    }
 
-        //console.log(description);
+    function resetRollete(){
+        props.downChances();
     }
     
     return (
         <div className='game-box'>
             <Roulette {...roulette_props}
              on_complete={(prize) => onComplete(prize)}
+             reset_callback = {() => resetRollete()}
              prize_arr={options}
              start_text="Iniciar"
              reset_text="Reiniciar"
