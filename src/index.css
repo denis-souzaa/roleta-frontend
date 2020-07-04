@@ -307,3 +307,17 @@ a {
     font-size: 1em;
   }
 }
+
+/* SOBRESCREVE A ROLETA */
+.fWTTQy {
+  z-index: 9!important;
+}
+.jQhhcR {
+  z-index: 99!important;
+}
+.olXyD {
+  z-index: 999!important;
+}
+.kIFDaX {
+  z-index: 9999!important;
+}
