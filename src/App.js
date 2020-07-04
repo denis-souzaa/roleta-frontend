@@ -4,17 +4,20 @@ import Roleta from './components/Roulette';
 import logo from './images/logo.svg';
 import menuImg from './images/menu.svg';
 import closeImg from './images/close.svg';
-import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const { width, height } = useWindowSize();
+  const [isCompleted, setIsCompleted] = useState(false);
 
   function handleMenu() {
     let open = !menuOpen;
     setMenuOpen(open)
+  }
+
+  function rolleteIsCompleted(completed){
+    setIsCompleted(completed);
   }
 
   return (
@@ -54,11 +57,11 @@ function App() {
               </div>
             </div>
             <div className="roullete-container">
-              <Roleta />
+              <Roleta isCompleted={rolleteIsCompleted}/>
             </div>
           </div>
           <Confetti
-            gravity={0.3} numberOfPieces={500} run={false} recycle={false}
+            gravity={0.3} numberOfPieces={500} run={isCompleted} recycle={false}
           />
         </div>
       </main>

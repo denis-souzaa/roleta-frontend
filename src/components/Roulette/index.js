@@ -11,7 +11,7 @@ import roulette_img_on_highlight from '../../images/rou_on_high.png'
 
 import './index.css';
 
-export default function Roleta() {
+export default function Roleta(props) {
 
     const options = [
         'verdade',
@@ -30,11 +30,11 @@ export default function Roleta() {
     }
 
     async function onComplete(option){
-        const response = await api.get(`/challenges/${option}`);
+        //const response = await api.get(`/challenges/${option}`);
+        props.isCompleted(true);
+       // const { description } = response.data;
 
-        const { description } = response.data;
-
-        console.log(description);
+        //console.log(description);
     }
     
     return (
