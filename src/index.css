@@ -264,15 +264,15 @@ a {
 }
 
 /* SOBRESCREVE A ROLETA */
-.fWTTQy {
+.Roulette-board-o {
   z-index: 9!important;
 }
-.jQhhcR {
+.Roulette-board-u {
   z-index: 99!important;
 }
-.kIFDaX {
+.highlight-area {
   z-index: 999!important;
 }
-.olXyD {
+.pointer {
   z-index: 9999!important;
 }

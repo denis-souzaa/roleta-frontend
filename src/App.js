@@ -61,7 +61,7 @@ function App() {
             </div>
           </div>
           <Confetti
-            gravity={0.3} numberOfPieces={500} run={isCompleted} recycle={false}
+            gravity={1} tweenDuration={1000} numberOfPieces={100} wind={0.01} run={isCompleted} recycle={false}
           />
         </div>
       </main>
