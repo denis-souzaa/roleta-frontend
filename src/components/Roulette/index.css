@@ -1,11 +1,7 @@
 .game-box{
-<<<<<<< HEAD
-    width: 40%;
-=======
     width: inherit;
     width: 30em;
     float: left;
->>>>>>> 8d668593b86c14f165e7e553f625fe455090b4f0
 }
 
 .start-btn, .reset-btn {
