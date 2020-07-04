@@ -58,9 +58,7 @@ function App() {
             </div>
           </div>
           <Confetti
-            run={false}
-            width={width}
-            height={height}
+            gravity={0.3} numberOfPieces={500} run={false} recycle={false}
           />
         </div>
       </main>
