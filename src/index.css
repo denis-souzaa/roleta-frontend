@@ -236,17 +236,10 @@ a {
 }
 
 .btn-question {
-  background: linear-gradient(#FFC72C, #FF992C);
-}
-.btn-challenge {
-  background: linear-gradient(#FF843B,#FF6A13);
-}
-
-.btn-question:hover {
   background: linear-gradient(#FFC72C,#FFC72C);
 }
-.btn-challenge:hover {
-  background: linear-gradient(#FF843B,#FF843B);
+.btn-challenge {
+  background: linear-gradient(#FFC72C,#FFC72C);
 }
 
 @media (max-width: 576px) {

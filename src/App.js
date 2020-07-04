@@ -31,9 +31,9 @@ function App() {
                 <img src={closeImg} alt="close" />
               </a>
               <div className="question">
-                <h3>Escolha seu desafio</h3>
-                <button className="btn btn-question">😂 Pergunta</button>
-                <button className="btn btn-challenge">😈 Desafio</button>
+                <h3>Pergunta: Você bla bla bla?</h3>
+                {/* <span className="btn btn-question">😂 Pergunta</span>
+                <span className="btn btn-challenge">😈 Desafio</span> */}
               </div>
               {/* <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
                 <img src={closeImg} alt="close" />
