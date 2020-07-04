@@ -20,6 +20,8 @@ export default function Roleta() {
         'desafio',
         'verdade',
         'desafio',
+        'verdade',
+        'desafio'
     ]
 
     const roulette_props = {
