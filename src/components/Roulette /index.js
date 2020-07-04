@@ -20,10 +20,6 @@ export default function Roleta() {
         'desafio',
         'verdade',
         'desafio',
-        'verdade',
-        'desafio',
-        'verdade',
-        'desafio',
     ]
 
     const roulette_props = {
@@ -46,6 +42,8 @@ export default function Roleta() {
             <Roulette {...roulette_props}
              on_complete={(prize) => onComplete(prize)}
              prize_arr={options}
+             start_text="Iniciar"
+             reset_text="Reiniciar"
             />
         </div>
     );

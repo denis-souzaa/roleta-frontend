@@ -1,3 +1,11 @@
 .game-box{
     width: 40%;
 }
+
+.start-btn, .reset-btn {
+    width: 100%;
+    background: #f9be2c;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+}
