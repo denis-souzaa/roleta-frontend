@@ -40,7 +40,7 @@ export default function Roleta() {
     }
 
     function openQuestionModal(title) {
-
+        
     }
 
     return (

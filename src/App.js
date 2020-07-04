@@ -4,12 +4,15 @@ import Roleta from './components/Roulette';
 import logo from './images/logo.svg';
 import menuImg from './images/menu.svg';
 import closeImg from './images/close.svg';
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 function App() {
 
-  const [ menuOpen, setMenuOpen ] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { width, height } = useWindowSize();
 
-  function handleMenu(){
+  function handleMenu() {
     let open = !menuOpen;
     setMenuOpen(open)
   }
@@ -17,7 +20,7 @@ function App() {
   return (
     <>
       <main>
-        <div className={`body sidemenu ${menuOpen ? 'open' :''}`}>
+        <div className={`body sidemenu ${menuOpen ? 'open' : ''}`}>
           <div className="menu">
             <div className="menu-content">
               <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
@@ -54,6 +57,11 @@ function App() {
               <Roleta />
             </div>
           </div>
+          <Confetti
+            run={false}
+            width={width}
+            height={height}
+          />
         </div>
       </main>
     </>

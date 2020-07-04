@@ -5,9 +5,26 @@
 }
 
 .start-btn, .reset-btn {
+    margin: 0.5em 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 2.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 3rem;
+    -webkit-box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
     width: 100%;
     background: #f9be2c;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 2px;
+}
+
+.reset-btn {
+    background: #FF843B;
 }
