@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Roleta from './components/Roulette ';
+import Roleta from './components/Roulette';
 
 import logo from './images/logo.svg';
 import menuImg from './images/menu.svg';
