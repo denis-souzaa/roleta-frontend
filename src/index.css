@@ -65,7 +65,7 @@ body {
 
 body::before {
   content: '';
-  background-image: url(../img/pattern.png);
+  background-image: url(./images/pattern.png);
   animation: moveIt 10s linear infinite;
   mix-blend-mode: multiply;
   width: 100%;
