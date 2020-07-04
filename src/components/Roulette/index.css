@@ -1,11 +1,12 @@
 .game-box{
     width: inherit;
     width: 30em;
-    float: left;
+    text-align: center;
+    display: flex;
 }
 
 .start-btn, .reset-btn {
-    margin: 0.5em 0;
+    margin: 0.5em auto;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -15,16 +16,20 @@
     text-transform: uppercase;
     font-weight: bold;
     color: white;
-    font-size: 2.5rem;
-    padding: 0.5rem 2rem;
+    font-size: xx-large;
+    padding: 0.4rem;
     border-radius: 3rem;
-    -webkit-box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
-    width: 100%;
     background: #f9be2c;
 }
 
 .reset-btn {
     background: #FF843B;
 }
+
+@media (max-width: 576px) {
+    .start-btn, .reset-btn {
+      font-size: x-large;
+    }
+  }
+  
