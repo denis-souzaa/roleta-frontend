@@ -6,7 +6,7 @@
 }
 
 .start-btn, .reset-btn {
-    margin: 0.5em auto;
+    margin: 1em auto;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -20,11 +20,18 @@
     padding: 0.4rem;
     border-radius: 3rem;
     box-shadow: 0px 0px 47px -20px rgba(0,0,0,0.75);
-    background: #f9be2c;
+    background: linear-gradient(#FFC72C, #FF992C);
 }
 
 .reset-btn {
-    background: #FF843B;
+    background: linear-gradient(#FF843B,#FF6A13);
+}
+
+.start-btn:hover {
+    background: linear-gradient(#FFC72C,#FFC72C);
+}
+.reset-btn:hover {
+    background: linear-gradient(#FF843B,#FF843B);
 }
 
 @media (max-width: 576px) {
