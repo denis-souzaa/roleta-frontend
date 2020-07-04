@@ -65,7 +65,7 @@ body {
 
 body::before {
   content: '';
-  background-image: url(../img/pattern.png);
+  background-image: url(../src/images/pattern.png);
   animation: moveIt 10s linear infinite;
   mix-blend-mode: multiply;
   width: 100%;
@@ -306,4 +306,15 @@ a {
   h2 {
     font-size: 1em;
   }
+}
+
+/* SOBRESCREVE A ROLETA */
+.fWTTQy {
+  z-index: 9!important;
+}
+.jQhhcR {
+  z-index: 99!important;
+}
+.olXyD {
+  z-index: 999!important;
 }
