@@ -8,6 +8,7 @@ import Confetti from 'react-confetti'
 
 function App() {
 
+  //const menuOptions = ["Info", "Question"];
   const [menuOpen, setMenuOpen] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
 
@@ -16,7 +17,7 @@ function App() {
     setMenuOpen(open)
   }
 
-  function rolleteIsCompleted(completed){
+  function rolleteIsCompleted(completed) {
     setIsCompleted(completed);
   }
 
@@ -29,6 +30,14 @@ function App() {
               <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
                 <img src={closeImg} alt="close" />
               </a>
+              <div className="question">
+                <h3>Escolha seu desafio</h3>
+                <button className="btn btn-question">😂 Pergunta</button>
+                <button className="btn btn-challenge">😈 Desafio</button>
+              </div>
+              {/* <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
+                <img src={closeImg} alt="close" />
+              </a>
               <ul className="nav">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#regras">Regras</a></li>
@@ -38,7 +47,7 @@ function App() {
                     <img src={logo} alt="logo" />
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div className="container">
@@ -57,7 +66,7 @@ function App() {
               </div>
             </div>
             <div className="roullete-container">
-              <Roleta isCompleted={rolleteIsCompleted}/>
+              <Roleta isCompleted={rolleteIsCompleted} />
             </div>
           </div>
           <Confetti
