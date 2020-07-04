@@ -16,9 +16,6 @@ function App() {
 
   return (
     <>
-      <header>
-
-      </header>
       <main>
         <div className={`body sidemenu ${menuOpen ? 'open' :''}`}>
           <div className="menu">
