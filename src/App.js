@@ -11,26 +11,25 @@ import closeImg from './images/close.svg';
 
 function App() {
 
-  //const menuOptions = ["Info", "Question"];
   const [openModal, setOpenModal] = useState(false);
   const [questionOpen, setQuestionOpen] = useState({
     description: '',
     option: ''
   });
   const [isCompleted, setIsCompleted] = useState(false);
-  const [ chances, setChances ] = useState(3);
+  const [chances, setChances] = useState(3);
 
   function handleMenu() {
     let open = !openModal;
     setOpenModal(open)
   }
 
-  function handleQuestion(description, option){
+  function handleQuestion(description, option) {
     setOpenModal(true);
-    setQuestionOpen({description, option});
+    setQuestionOpen({ description, option });
   }
 
-  function downChances(){
+  function downChances() {
     setChances(chances - 1);
   }
 
@@ -48,13 +47,15 @@ function App() {
                 <img src={closeImg} alt="close" />
               </a>
               {
-                chances > 0 ? 
-                <div className="question">
-                  <h3>{questionOpen.option}:</h3>
-                  <p>{questionOpen.description}</p>
-                </div> : <Chances />
+                chances > 0 ?
+                  <div className="question">
+                    <h3 className={`${questionOpen.option}`}>{questionOpen.option}:</h3>
+                    <p>{questionOpen.description}</p>
+                  </div> : <Chances />
               }
-              {/* <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
+            </div>
+            {/* <div className="menu-content">
+              <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
                 <img src={closeImg} alt="close" />
               </a>
               <ul className="nav">
@@ -66,8 +67,8 @@ function App() {
                     <img src={logo} alt="logo" />
                   </a>
                 </li>
-              </ul> */}
-            </div>
+              </ul>
+            </div> */}
           </div>
           <div className="container">
             <div className="header">
@@ -85,10 +86,10 @@ function App() {
               </div>
             </div>
             <div className="roullete-container">
-              <Roleta 
+              <Roleta
                 isCompleted={rolleteIsCompleted}
                 openQuestion={handleQuestion}
-                downChances = {downChances}
+                downChances={downChances}
               />
             </div>
           </div>

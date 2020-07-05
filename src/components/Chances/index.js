@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Chances() {
     return (
-        <p>Leia um novo Qr code para continuar jogando</p>
+        <h3>Leia um novo Qr code para continuar jogando</h3>
     );
 }

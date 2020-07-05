@@ -23,7 +23,14 @@
     background: linear-gradient(#FFC72C, #FF992C);
 }
 
+@media (max-width: 576px) {
+    .start-btn, .reset-btn {
+        font-size: x-large;
+    }
+}
+
 .reset-btn {
+    font-size: large;
     background: linear-gradient(#FF843B,#FF6A13);
 }
 .start-btn:hover {
@@ -32,10 +39,3 @@
 .reset-btn:hover {
     background: linear-gradient(#FF843B,#FF843B);
 }
-
-@media (max-width: 576px) {
-    .start-btn, .reset-btn {
-      font-size: x-large;
-    }
-  }
-  

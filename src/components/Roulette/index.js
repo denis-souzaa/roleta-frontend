@@ -14,11 +14,11 @@ import './index.css';
 export default function Roleta(props) {
 
     const options = [
-        'verdade',
+        'pergunta',
         'desafio',
-        'verdade',
+        'pergunta',
         'desafio',
-        'verdade',
+        'pergunta',
         'desafio',
     ]
 
@@ -50,7 +50,7 @@ export default function Roleta(props) {
              reset_callback = {() => resetRollete()}
              prize_arr={options}
              start_text="Iniciar"
-             reset_text="Reiniciar"
+             reset_text="Rodar Novamente"
             />
         </div>
     );
