@@ -28,7 +28,6 @@ function App() {
 
   function handleQuestion(description, option) {
     setOpenModal(true);
-    console.log(menuOpen)
     setMenuOpen(false);
     setQuestionOpen({ description, option });
   }
