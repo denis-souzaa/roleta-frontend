@@ -11,6 +11,7 @@ import closeImg from './images/close.svg';
 
 function App() {
 
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [questionOpen, setQuestionOpen] = useState({
     description: '',
@@ -20,12 +21,15 @@ function App() {
   const [chances, setChances] = useState(3);
 
   function handleMenu() {
-    let open = !openModal;
+    const open = !openModal;
     setOpenModal(open)
+    setMenuOpen(true)
   }
 
   function handleQuestion(description, option) {
     setOpenModal(true);
+    console.log(menuOpen)
+    setMenuOpen(false);
     setQuestionOpen({ description, option });
   }
 
@@ -42,33 +46,36 @@ function App() {
       <main>
         <div className={`body sidemenu ${openModal ? 'open' : ''}`}>
           <div className="menu">
-            <div className="menu-content">
-              <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
-                <img src={closeImg} alt="close" />
-              </a>
-              {
-                chances > 0 ?
-                  <div className="question">
-                    <h3 className={`${questionOpen.option}`}>{questionOpen.option}:</h3>
-                    <p>{questionOpen.description}</p>
-                  </div> : <Chances />
-              }
-            </div>
-            {/* <div className="menu-content">
-              <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
-                <img src={closeImg} alt="close" />
-              </a>
-              <ul className="nav">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#regras">Regras</a></li>
-                <li><a href="#ajuda">Ajuda</a></li>
-                <li>
-                  <a href="https://www.ambev.com.br/" title="Cervejaria Ambev">
-                    <img src={logo} alt="logo" />
-                  </a>
-                </li>
-              </ul>
-            </div> */}
+            {
+              !menuOpen ?
+              <div className="menu-content">
+                <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
+                  <img src={closeImg} alt="close" />
+                </a>
+                {
+                  chances > 0 ?
+                    <div className="question">
+                      <h3 className={`${questionOpen.option}`}>{questionOpen.option}:</h3>
+                      <p>{questionOpen.description}</p>
+                    </div> : <Chances />
+                }
+              </div> :
+              <div className="menu-content">
+                <a className="close" href="#/" onClick={(e) => handleMenu(e)}>
+                  <img src={closeImg} alt="close" />
+                </a>
+                <ul className="nav">
+                  <li><a href="#sobre">Sobre</a></li>
+                  <li><a href="#regras">Regras</a></li>
+                  <li><a href="#ajuda">Ajuda</a></li>
+                  <li>
+                    <a href="https://www.ambev.com.br/" title="Cervejaria Ambev">
+                      <img src={logo} alt="logo" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            }
           </div>
           <div className="container">
             <div className="header">
